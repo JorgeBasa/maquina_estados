@@ -8,13 +8,15 @@ const estado_base = {
         document.querySelector("#mostrar_estado").innerText = "boton pulsao",
         console.log(evento)
 
-        if (evento.div && evento.div.id === "boton1"){
+        if (evento.target && evento.target.id === "boton1"){
             maquina_estados.cambiar_estado(llorar_por_comida);
+        } else {
+            console.log("Houston la CTM")
         }
     },
 
     finalizar: () => {
-        document.querySelector("#mostrar_estado").innerText = "Saliendo del estado"
+        document.querySelector("#mostrar_estado").innerText = "Saliendo del estado";
     },
 
 }
