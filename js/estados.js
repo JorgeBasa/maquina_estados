@@ -26,12 +26,21 @@ var llorar_por_comida = {
     inicializar: () => {
         document.querySelector("#mostrar_estado").innerText = "Está llorando por comida"    },
     
-    actualizar: () => {
-        //document.querySelector("#mostrar_estado").innerText = "boton pulsao"
+    actualizar: (evento) => {
+        if (evento.target && evento.target.id === "boton1"){
+            console.log("Come we");
+            //MaquinaEstados.cambiar_estado(estado_base);
+        } else {
+            console.log("dafuq?")
+        }
     },
 
     finalizar: () => {
-        document.querySelector("#mostrar_estado").innerText = "Saliendo del estado y llorando por comida"
+        document.querySelector("#mostrar_estado").innerText = "Saliendo del estado: llorando por comida"
     },
 
 }
+
+/*var Dormir {
+    
+}*/
