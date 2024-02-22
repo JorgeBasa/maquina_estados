@@ -1,12 +1,19 @@
 var estado_base = {
     inicializar: () => {
-        document.querySelector("#mostrar_estado").innerText = "jajaalchile";
-        document.querySelector("#boton1").innerText = "Cambiar a Llorar por Comida";
-        document.querySelector("#boton2").innerText = "Cambiar a Dormir";  },
+        document.querySelector("#mostrar_estado").innerText = "Neutral.";
+        document.querySelector("#boton1").innerText = "Alimentar";
+        document.querySelector("#boton2").classList.add="oculto"; 
+    
+    },
     
     actualizar: (evento) => {
         document.querySelector("#mostrar_estado").innerText = "boton pulsao"
         console.log(evento.target)
+
+        if(evento.type == "temporizador"){
+            bebe.hambre += 10
+            document.querySelector("#mostrar_estado").innerText = `Nene tiene ${bebe.hambre} cantidad de hambre.`
+        } bebe.hambre<90
 
         if (evento.target && evento.target.id === "boton1"){
             console.log("Houston Estamos Bien")

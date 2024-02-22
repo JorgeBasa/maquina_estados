@@ -16,3 +16,7 @@
     background-color: rgb(110, 110, 110);
     margin:10px;
 }
+
+.oculto {
+    display: none,
+}
