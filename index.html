@@ -1,3 +1,5 @@
+<!-- TAREA: AÑADIR ESTADOS: LLORAR POR COMIDA, ALIMENTAR, LLORAR POR PAÑALES Y CAMBIAR -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,14 +8,15 @@
         <title>Maquina de Estados - 204723</title>
             <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <div id="mostrar_estado" onclick="MaquinaEstados.actualizar(event)"> ...
+    <body onload = "MaquinaEstados.inicializar()">
+        <div id="mostrar_estado" class="contenedor contenedor_estado"> 
+            Estado base
         </div>
 
-        <div id="boton1" class= "contenedorcontenedor_boton" onclick="MaquinaEstados.actualizar(event)">Secundario</div>
+        <div id="boton1" class="contenedor contenedor_boton" onclick="MaquinaEstados.actualizar(event)">Secundario</div>
 
-        <div id="boton2" class= "contenedorcontenedor_boton" onclick="MaquinaEstados.actualizar(event)">Secundario</div>
-        
+        <div id="boton2" class= "contenedor contenedor_boton" onclick="MaquinaEstados.actualizar(event)">Secundario</div>
+
     </body>
     <script type="text/javascript" src="js/estados.js"></script>
     <script type="text/javascript" src="js/maquina_estados.js"></script>

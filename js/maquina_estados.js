@@ -1,8 +1,8 @@
-var estado_actual = estado_base;
+let estado_actual = estado_base;
 
 const tiempo_espera = 1000;
 
-var MaquinaEstados = {
+const MaquinaEstados = {
 
     inicializar: () => {
         console.log("Está VIVO")
@@ -12,12 +12,13 @@ var MaquinaEstados = {
     actualizar: (evento) => {
         console.log(estado_actual);
         estado_actual.actualizar(evento);
-
-        console.log("?????");
     },
 
     cambiar_estado:(estado_nuevo) => {
         console.log("---(cambiando estado)---");
+        console.log("---(estado actual)---");
+        console.log(estado_actual);
+        console.log("---(estado nuevo)---");
         console.log(estado_nuevo);
 
         estado_actual.finalizar()
@@ -26,11 +27,6 @@ var MaquinaEstados = {
     }
 
 }
-
-
-
-
-
 
 
 setInterval(() => {
